@@ -10,7 +10,7 @@ if (startTop == true && startLeft == true) {
     for (let i = 1; i <= hoogte; i++) {
         let rij = '';
         for (let j = 1; j <= i; j++) {
-            rij += '*';
+            rij += i;
         }
         console.log(rij);
     }
@@ -20,7 +20,7 @@ if (startTop == false && startLeft == true) {
     for (let i = hoogte; i > 0; i--) {
         let rij = '';
         for (let j = i; j > 0; j--) {
-            rij += '*';
+            rij += i;
         }
         console.log(rij);
     }
@@ -32,7 +32,7 @@ if (startTop == false && startLeft == false) {
         for(let j = hoogte - i; j > 0; j--) {
             rij += ' ';
         } for (let k = 1; k <= i; k++){
-            rij += '*';
+            rij += i;
         }
         console.log(rij);
     }
