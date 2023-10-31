@@ -3,8 +3,8 @@ import { stdin as input, stdout as output } from 'node:process';
 const userInput = readline.createInterface({ input, output });
 
 let hoogte = parseFloat(await userInput.question('Geef de hoogte van de piramide: '));
-let startTop = true;
-let startLeft = true;
+let startTop = false;
+let startLeft = false;
 
 if (startTop == true && startLeft == true) {
     for (let i = 1; i <= hoogte; i++) {
@@ -15,5 +15,38 @@ if (startTop == true && startLeft == true) {
         console.log(rij);
     }
 }
+
+if (startTop == false && startLeft == true) {
+    for (let i = hoogte; i > 0; i--) {
+        let rij = '';
+        for (let j = i; j > 0; j--) {
+            rij += '*';
+        }
+        console.log(rij);
+    }
+}
+
+if (startTop == false && startLeft == false) {
+    for (let i = 1; i <= hoogte; i++) {
+        let rij = '';
+        for(let j = hoogte - i; j > 0; j--) {
+            rij += ' ';
+        } for (let k = 1; k <= i; k++){
+            rij += '*';
+        }
+        console.log(rij);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 process.exit();
