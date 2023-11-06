@@ -11,64 +11,30 @@ if (hoogte % 2 === 0) {
 }
 let midden = (hoogte + 1) / 2;
 
-function sterren (hoogte, breedte) {
-    for (let i = 1; i <= hoogte; i++) {
-        let rij = '';
-        for (let j = 1; j <= breedte; j++) {
-            rij += '*';
-        }
-
-        for (let i = 1; i <= midden; i++) {
-            let rij = '';
-            for(let j = 1; j <= midden - i; j++) {
-                rij += ' ';
-            } for (let k = 1; k <= 2 * i - 1; k++) {
-                rij += 'X'
-            }
-            console.log(rij);
-        }
-        console.log(rij);
+for (let i = 0; i <= hoogte; i++) {
+    let rij = '';
+    for (let j = 0; j <= hoogte - i; j++) {
+        rij += '*';
+    } for (let k = 1; k <= 2 * i; k++) {
+        rij += ' ';
+    } for (let l = 0; l <= hoogte - i; l++) {
+        rij += '*';
     }
+    console.log(rij);
 }
-
-function ruit (midden) {
-    for (let i = 2; i <= midden; i++) {
-        let rij = '';
-        for(let j = 1; j <= midden - i; j++) {
-            rij += ' ';
-        } for (let k = 1; k <= 2 * i - 1; k++) {
-            rij += 'X'
-        }
-        console.log(rij);
+for (let i = hoogte - 1; i > -1; i--) {
+    let rij = '';
+    for (let j = 0; j <= hoogte - i; j++) {
+        rij += '*';
+    } for (let k = 1; k <= 2 * i; k++) {
+        rij += ' ';
+    } for (let l = 0; l <= hoogte - i; l++) {
+        rij += '*';
     }
-    for (let i = midden - 1; i >0 ; i--) {
-        let rij = '';
-        for(let j = 1; j <= midden - i; j++) {
-            rij += ' ';
-        } for (let k = 1; k <= 2 * i - 1; k++) {
-            rij += 'X'
-        }
-        console.log(rij);
-    }
+    console.log(rij);
 }
-
-
-
-
-
-
-
-ruit (hoogte, breedte)
-
-//sterren (hoogte, breedte);
 
 process.exit();
-
-
-
-
-
-
 
 
 /*
