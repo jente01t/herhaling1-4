@@ -31,8 +31,10 @@ async function winaar (user, computer) {
     if (user == 3 || computer == 3) {
         if (user == 3) {
             console.log('Gebruiker heeft gewonnen.')
+            process.exit();
         } else {
             console.log('Computer heeft gewonnen.')
+            process.exit();
         }
     } else {
         await keuze(user, computer)
