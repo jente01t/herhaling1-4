@@ -9,3 +9,17 @@ let reizen = [
     ["Kreta", [530, 590, 610, 490, 495]]
 ]
 
+for (let i = 0; i < reizen.length; i++) {
+    let prijzen = reizen[i][1];
+    let laagstePrijs = prijzen[0];
+
+    for (let j = 1; j < prijzen.length; j++) {
+        if (prijzen[j] < laagstePrijs) {
+            laagstePrijs = prijzen[j];
+        }
+    }
+
+    console.log('De laagste prijs voor ' + reizen[i][0] + ' is ' + laagstePrijs);
+}
+
+process.exit();
