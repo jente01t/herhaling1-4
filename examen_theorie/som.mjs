@@ -38,3 +38,14 @@ console.log("De som van de getallen is: " + som);
 
 // console.log("De som van de getallen is: " + som);
 
+
+
+
+for (let i = 1; i <= 4; i++) {
+    let rij = '';
+    for (let j = 1; j <= i; j++) {
+        rij += j;
+    }
+    console.log(rij);
+}
+
